@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://www.w3schools.com/w3css/w3.css">
+    <link rel="stylesheet" href="http://www.w3schools.com/w3css/w3-theme-blue-grey.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/ico" href="favicon.ico">
+    <title>Sterling Codes - Blog</title>
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/blog/feed.xml" />
+  </head>
+  <body>
+
+    <div class="w3-topnav w3-theme">
+      <span class"w3-left">
+        <a href="/">Sterling Codes</a> -
+        <a href="/blog/">Blog</a>
+        
+      </span>
+      <span class="w3-right w3-xlarge">
+        <i class="fa fa-exchange"></i>
+      </span>
+    </div>
+    <div class="w3-row w3-container w3-text-theme"> 
+      <div class="w3-col m8 l9" id="main" role="main">
+        <?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Blog Name</title>
+  <subtitle>Blog subtitle</subtitle>
+  <id>http://blog.url.com/blog</id>
+  <link href="http://blog.url.com/blog"/>
+  <link href="http://blog.url.com/blog/feed.xml" rel="self"/>
+  <updated>2015-08-26T10:56:00-06:00</updated>
+  <author>
+    <name>Blog Author</name>
+  </author>
+  <entry>
+    <title>Keep Talking</title>
+    <link rel="alternate" href="http://blog.url.com/blog/2015/08/26/keep-talking/"/>
+    <id>http://blog.url.com/blog/2015/08/26/keep-talking/</id>
+    <published>2015-08-26T10:56:00-06:00</published>
+    <updated>2015-08-26T10:56:41-06:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">
+</content>
+  </entry>
+</feed>
+
+      </div>
+      
+      <div class="w3-col w3-container m4 l3 w3-padding-12">
+        <h2>Recent Articles</h2>
+        <ol>
+            <li><a href="/blog/2015/08/26/keep-talking/">Keep Talking</a> <span>Aug 26</span></li>
+        </ol>
+
+        <h2>Tags</h2>
+        <ol>
+        </ol>
+
+        <h2>By Year</h2>
+        <ol>
+            <li><a href="/blog/2015/">2015 (1)</a></li>
+        </ol>
+      </div>
+    </div>
+  </body>
+</html>
