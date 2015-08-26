@@ -30,20 +30,24 @@
   <id>http://blog.url.com/blog</id>
   <link href="http://blog.url.com/blog"/>
   <link href="http://blog.url.com/blog/feed.xml" rel="self"/>
-  <updated>2015-08-26T10:56:00-06:00</updated>
+  <updated>2015-08-26T13:08:00-06:00</updated>
   <author>
     <name>Blog Author</name>
   </author>
   <entry>
-    <title>Keep Talking</title>
-    <link rel="alternate" href="http://blog.url.com/blog/2015/08/26/keep-talking/"/>
-    <id>http://blog.url.com/blog/2015/08/26/keep-talking/</id>
-    <published>2015-08-26T10:56:00-06:00</published>
-    <updated>2015-08-26T10:56:41-06:00</updated>
+    <title>SFS Intro to RAILS</title>
+    <link rel="alternate" href="http://blog.url.com/blog/2015/08/26/sfs-intro-to-rails/"/>
+    <id>http://blog.url.com/blog/2015/08/26/sfs-intro-to-rails/</id>
+    <published>2015-08-26T13:08:00-06:00</published>
+    <updated>2015-08-26T13:15:51-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>
-    <content type="html">
+    <content type="html">&lt;p&gt;SFS' Intro to RAILS is coming up on September 12th at DenHac. You should join us.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.sofree.us/2015/06/sffs-september-a-gentle-hands-on-introduction-to-rails-by-will-sterling/"&gt;Details&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.meetup.com/denhac-hackerspace/events/224364401/"&gt;RSVP via this Meetup&lt;/a&gt;&lt;/p&gt;
 </content>
   </entry>
 </feed>
@@ -53,11 +57,14 @@
       <div class="w3-col w3-container m4 l3 w3-padding-12">
         <h2>Recent Articles</h2>
         <ol>
-            <li><a href="/blog/2015/08/26/keep-talking/">Keep Talking</a> <span>Aug 26</span></li>
+            <li><a href="/blog/2015/08/26/sfs-intro-to-rails/">SFS Intro to RAILS</a> <span>Aug 26</span></li>
         </ol>
 
         <h2>Tags</h2>
         <ol>
+            <li><a href="/blog/tags/sfs/">SFS (1)</a></li>
+            <li><a href="/blog/tags/rails/">RAILS (1)</a></li>
+            <li><a href="/blog/tags/learntocode/">learntocode (1)</a></li>
         </ol>
 
         <h2>By Year</h2>
