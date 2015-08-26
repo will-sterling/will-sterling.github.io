@@ -2,7 +2,7 @@
 # Blog settings
 ###
 
-# Time.zone = "UTC"
+ Time.zone = "Mountain Time (US & Canada)"
 
 page "/presentations/*", :layout => "preso_layout"
 activate :blog do |blog|

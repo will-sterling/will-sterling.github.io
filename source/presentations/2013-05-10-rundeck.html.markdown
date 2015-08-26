@@ -1,6 +1,6 @@
 ---
 title: Rundeck
-date: 2013-05-10 00:00 UTC
+date: 2013-05-10 00:00 MST
 tags:
 blog: preso
 ---

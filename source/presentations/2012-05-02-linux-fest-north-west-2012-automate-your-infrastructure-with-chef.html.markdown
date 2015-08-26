@@ -1,6 +1,6 @@
 ---
 title: Linux Fest North West 2012 Automate Your Infrastructure With Chef
-date: 2012-05-02 00:00 UTC
+date: 2012-05-02 00:00 MST
 tags: chef, linux
 blog: preso
 ---
