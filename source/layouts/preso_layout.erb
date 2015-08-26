@@ -1,0 +1,58 @@
+---
+blog: preso
+---
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://www.w3schools.com/w3css/w3.css">
+    <link rel="stylesheet" href="http://www.w3schools.com/w3css/w3-theme-blue-grey.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/ico" href="favicon.ico">
+    <title>Sterling Codes - Presentations<%= ' - ' + current_article.title unless current_article.nil? %></title>
+    <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
+  </head>
+  <body>
+
+    <div class="w3-topnav w3-theme">
+      <h3>
+        <span class"w3-left">
+          <%= link_to "Sterling Codes", '/' %> -
+          <%= link_to "Presentations", '/presentations/' %>
+          <%= ' - ' + current_article.title unless current_article.nil? %>
+        </span>
+        <span class="w3-right w3-xxlarge">
+          <i class="fa fa-pie-chart"></i>
+        </span>
+      </h3>
+    </div>
+    <div class="w3-row w3-container w3-text-theme"> 
+      <div class="w3-col m8 l9" id="main" role="main">
+        <%= yield %>
+      </div>
+      
+      <div class="w3-col w3-container m4 l3 w3-padding-12">
+        <h2>Recent Articles</h2>
+        <ol>
+          <% blog.articles[0...10].each do |article| %>
+            <li><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></li>
+          <% end %>
+        </ol>
+
+        <h2>Tags</h2>
+        <ol>
+          <% blog.tags.each do |tag, articles| %>
+            <li><%= link_to "#{tag} (#{articles.size})", tag_path(tag) %></li>
+          <% end %>
+        </ol>
+
+        <h2>By Year</h2>
+        <ol>
+          <% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
+            <li><%= link_to "#{year} (#{articles.size})", blog_year_path(year) %></li>
+          <% end %>
+        </ol>
+      </div>
+    </div>
+  </body>
+</html>
