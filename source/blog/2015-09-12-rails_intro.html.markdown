@@ -8,6 +8,7 @@ Below are the materials I used for the Rails Intro course.  If you want to follo
 
 If you need help feel free to contact me on Twitter @will_sterling or [LinkedIn](https://www.linkedin.com/pub/will-sterling)
 
+(READMORE)
 
 [presentation](/presentations/2015/09/12/rails_intro/)
 

@@ -1,6 +1,38 @@
+  def setup_summary_generator(
+    separator = /(READMORE)/i,
+    readmore_text = 'Read more',
+    link_to_separator_position = true)
+
+    return Proc.new  do |resource, rendered, length, ellipsis|
+      require 'middleman-blog/truncate_html'
+      if link_to_separator_position
+        readmore_link = "\n<p class = 'readmore'>#{link_to(readmore_text, resource, :fragment => 'readmore')}</p>"
+      else
+        readmore_link = "\n<p class = 'readmore'>#{link_to(readmore_text, resource)}</p>"
+      end
+
+      if rendered =~ separator
+        # The separator is found in the text
+        summary = rendered.split(separator).first
+        summary + readmore_link   # return
+      elsif length
+        summary = TruncateHTML.truncate_html(rendered, length, ellipsis)
+        unless summary.strip == rendered.strip  # If the
+              # original text was longer then the summary...
+          summary = summary + readmore_link     # ...add
+              # a read more-link.
+        end
+        summary    # return
+      else
+        rendered   # return
+      end
+    end
+  end
+
 ###
 # Blog settings
 ###
+ @readmore_separator = /(<p>)?\(ReadMore\)(<\/p>)?/i
 
  Time.zone = "Mountain Time (US & Canada)"
 
@@ -16,8 +48,9 @@ activate :blog do |blog|
   # blog.sources = "{year}-{month}-{day}-{title}.html"
   # blog.taglink = "tags/{tag}.html"
    blog.layout = "preso_layout"
-   blog.summary_separator = /(READMORE)/
+   blog.summary_separator = /DUMMY Seperator/
    blog.summary_length = 250
+   blog.summary_generator = setup_summary_generator(@readmore_separator)
   # blog.year_link = "{year}.html"
   # blog.month_link = "{year}/{month}.html"
   # blog.day_link = "{year}/{month}/{day}.html"
@@ -44,8 +77,9 @@ activate :blog do |blog|
   # blog.sources = "{year}-{month}-{day}-{title}.html"
   # blog.taglink = "tags/{tag}.html"
    blog.layout = "blog_layout"
-   blog.summary_separator = /(READMORE)/
+   blog.summary_separator = /DUMMY SPEERATOR/
    blog.summary_length = 250
+   blog.summary_generator = setup_summary_generator(@readmore_separator)
   # blog.year_link = "{year}.html"
   # blog.month_link = "{year}/{month}.html"
   # blog.day_link = "{year}/{month}/{day}.html"
@@ -142,4 +176,11 @@ activate :deploy do |deploy|
   deploy.branch   = 'master' # default: gh-pages
   # deploy.strategy = :submodule      # commit strategy: can be :force_push or :submodule, default: :force_push
   # deploy.commit_message = 'custom-message'      # commit message (can be empty), default: Automated commit at `timestamp` by middleman-deploy `version`
+end
+
+
+helpers do
+  def cleanup_readmore(html)
+    html.sub(@readmore_separator, "<span id='readmore'></span>")
+  end
 end
