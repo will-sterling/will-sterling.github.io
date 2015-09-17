@@ -7,7 +7,7 @@ Below is an embeded embeded slide deck. You can move forward by clicking on a
 slide or move in either direction by selecting it and using arrows on your
 keyboard.
 <div> 
-    <object type="text/html" data="http://sterling.codes/Rails-Intro-Slides">
+    <object type="text/html" data="http://sterling.codes/Rails-Intro-Slides" width="900" height="600">
     </object>
 </div>
 
